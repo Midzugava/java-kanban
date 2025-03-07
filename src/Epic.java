@@ -34,4 +34,17 @@ public class Epic extends Task {
             this.status = Status.NEW;
         }
     }
+
+    // Переопределяем toString для эпика
+    @Override
+    public String toString() {
+        return "Epic{" +
+                "id=" + getId() +
+                ", title='" + getTitle() + '\'' +
+                ", description='" + getDescription() + '\'' +
+                ", status=" + getStatus() +
+                ", subtasksCount=" + subtasks.size() +
+                '}';
+    }
+
 }
