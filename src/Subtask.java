@@ -9,4 +9,17 @@ public class Subtask extends Task {
     public int getEpicId() {
         return epicId;
     }
+
+    // Переопределяем toString для подзадачи
+    @Override
+    public String toString() {
+        return "Subtask{" +
+                "id=" + getId() +
+                ", title='" + getTitle() + '\'' +
+                ", description='" + getDescription() + '\'' +
+                ", status=" + getStatus() +
+                ", epicId=" + epicId +
+                '}';
+    }
+
 }

@@ -29,6 +29,18 @@ public class Task {
         return status;
     }
 
+    // Переопределяем toString для вывода информации о задаче
+    @Override
+    public String toString() {
+        return "Task{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", status=" + status +
+                '}';
+    }
+
+    // Переопределяем методы equals и hashCode для сравнения задач по идентификатору
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
