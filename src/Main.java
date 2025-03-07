@@ -17,6 +17,13 @@ public class Main {
         System.out.println("Все подзадачи");
         System.out.println(taskManager.getAllSubtasks());
 
+        System.out.println("Все эпики:");
+        System.out.println(taskManager.getAllEpics());
+        taskManager.deleteSubtask(3);
+        System.out.println(taskManager.getTask(1));
+        System.out.println(taskManager.getSubtask(3));
+
+        // Меняем статус подзадачи
         subtask1 = new Subtask(subtask1.getTitle(), subtask1.getDescription(), subtask1.getId(),
                 Status.DONE, epic1.getId());
         taskManager.updateSubtask(subtask1);
