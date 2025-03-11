@@ -69,6 +69,23 @@ public class TaskManager {
     public void deleteEpic(int id) {
         epics.remove(id);
     }
+    // Удаление всех задач
+    public void deleteAllTasks() {
+        tasks.clear();
+    }
+
+    // Удаление всех подзадач
+    public void deleteAllSubtasks() {
+        for (Subtask subtask : subtasks.values()) {
+            Epic epic = epics.get(subtask.getEpicId());
+            if (epic != null) {
+                epic.getSubtasks().remove(subtask); // Удаляем подзадачу из эпика
+                epic.updateEpicStatus(); // Обновление статуса эпика
+            }
+        }
+        subtasks.clear();
+    }
+
     public void updateTask(Task task) {
         tasks.put(task.getId(), task);
     }
