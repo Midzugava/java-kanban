@@ -30,7 +30,7 @@ public class Epic extends Task {
         } else if (anyInProgress) {
             setStatus(Status.IN_PROGRESS);  // Используем метод-setter
         } else {
-            this.status = Status.NEW;
+            setStatus(Status.NEW);  // Используем метод-setter
         }
     }
 
