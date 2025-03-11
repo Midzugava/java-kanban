@@ -19,8 +19,7 @@ public class Epic extends Task {
 
     public void updateEpicStatus() {
         if (subtasks.isEmpty()) {
-            // Если подзадач нет, статус NEW
-            this.status = Status.NEW;
+            setStatus(Status.NEW);  // Используем метод-setter
             return;
         }
         boolean allDone = subtasks.stream().allMatch(subtask -> subtask.getStatus() == Status.DONE);
