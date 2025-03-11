@@ -104,4 +104,8 @@ public class TaskManager {
         epics.put(epic.getId(), epic);
         epic.updateEpicStatus();
     }
+
+    private int generateId() {
+        return idCounter++;
+    }
 }
