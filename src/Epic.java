@@ -26,7 +26,7 @@ public class Epic extends Task {
         boolean anyInProgress = subtasks.stream().anyMatch(subtask -> subtask.getStatus() == Status.IN_PROGRESS);
 
         if (allDone) {
-            this.status = Status.DONE;
+            setStatus(Status.DONE);  // Используем метод-setter
         } else if (anyInProgress) {
             this.status = Status.IN_PROGRESS;
         } else {
