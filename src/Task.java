@@ -13,6 +13,10 @@ public class Task {
         this.status = status;
     }
 
+    public Status getStatus() {
+        return status;
+    }
+
     public String getTitle() {
         return title;
     }
