@@ -57,6 +57,11 @@ public class TaskManager {
     public List<Task> getAllTasks() {
         return new ArrayList<>(tasks.values());
     }
+
+    public List<Epic> getAllEpics() { // Метод для получения всех эпиков добавлен
+        return new ArrayList<>(epics.values());
+    }
+
     public List<Subtask> getAllSubtasks() {
         return new ArrayList<>(subtasks.values());
     }
