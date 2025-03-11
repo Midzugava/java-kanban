@@ -53,4 +53,8 @@ public class Task {
     public int hashCode() {
         return Integer.hashCode(id);
     }
+
+    protected void setStatus(Status status) {
+        this.status = status;
+    }
 }
