@@ -14,7 +14,7 @@ public class Main {
         System.out.println("Все задачи");
         System.out.println(taskManager.getAllTasks());
 
-        System.out.println("Все подзадачи");
+        System.out.println("Все подзадачи:");
         System.out.println(taskManager.getAllSubtasks());
 
         // Изменение статуса подзадачи
